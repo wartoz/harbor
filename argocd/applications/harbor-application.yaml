@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: harbor
+  namespace: argocd
+spec:
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+  project: default
+  sources:
+    - chart: harbor
+      repoURL: https://charts.bitnami.com/bitnami
+      targetRevision: v26.7.6 # Replace with the Harbor version you'd like to install or upgrade to
+      helm:
+        valueFiles: 
+        - $values/harbor-values.yaml
+    - repoURL: 'https://github.com/wartoz/harbor.git'
+      targetRevision: main
+      ref: values
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: harbor
