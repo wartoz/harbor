@@ -1,10 +1,11 @@
-ingress:
-  core:
-    ingressClassName: traefik
-    hostname: k8s-harbor.docker-compose.zip
-    tls: true
-    secrets:
-      - name: k8s-harbor-docker-compose-zip-tls
-exposureType: ingress
+expose:
+  ingress:
+    className: traefik
+    hosts: 
+      core: k8s-harbor.docker-compose.zip
+  tls:
+    certSource: secret
+    secret:
+      secretName: "k8s-harbor-docker-compose-zip-tls"
 externalURL: https://k8s-harbor.docker-compose.zip
-adminPassword: Harbor12345
+harborAdminPassword: "Harbor12345"

@@ -10,8 +10,8 @@ spec:
   project: default
   sources:
     - chart: harbor
-      repoURL: https://charts.bitnami.com/bitnami
-      targetRevision: v26.7.6 # Replace with the Harbor version you'd like to install or upgrade to
+      repoURL: https://helm.goharbor.io
+      targetRevision: v1.17.1 # Replace with the Harbor version you'd like to install or upgrade to
       helm:
         valueFiles: 
         - $values/harbor-values.yaml
