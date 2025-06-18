@@ -4,7 +4,7 @@ ingress:
     hostname: k8s-harbor.docker-compose.zip
     tls: true
     secrets:
-      - name: blabla
+      - name: k8s-harbor-docker-compose-zip-tls
 exposureType: ingress
 externalURL: https://k8s-harbor.docker-compose.zip
 adminPassword: Harbor12345
