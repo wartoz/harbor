@@ -1,10 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
+  "extends": [
+    "config:recommended"
+  ],
   "prHourlyLimit": 10,
   "argocd": {
-    "fileMatch": [
-      "argocd/applications/.*\\.yaml"
+    "managerFilePatterns": [
+      "/argocd/applications/.*\\.yaml/"
     ]
   }
 }
