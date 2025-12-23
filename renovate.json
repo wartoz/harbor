@@ -4,7 +4,7 @@
   "prHourlyLimit": 10,
   "argocd": {
     "fileMatch": [
-      "argocd/applications/.*\.yaml"
+      "argocd/applications/.*\\.yaml"
     ]
   }
 }
