@@ -11,7 +11,7 @@ spec:
   sources:
     - chart: harbor
       repoURL: https://helm.goharbor.io
-      targetRevision: 1.18.1 # Replace with the Harbor version you'd like to install or upgrade to
+      targetRevision: 1.18.2 # Replace with the Harbor version you'd like to install or upgrade to
       helm:
         valueFiles: 
         - $values/harbor-values.yaml
